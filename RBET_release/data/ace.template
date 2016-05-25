@@ -1,0 +1,31 @@
+Business:End-Org { Org[ORG] Place[FAC|GPE] Time-At-Beginning[TME] }
+Business:Start-Org { Agent[GPE|ORG|PER] Org[ORG] Place[FAC|GPE] Time-After[TME] Time-Within[TME] }
+Conflict:Attack { Attacker[GPE|ORG|PER] Instrument[VEH|WEA] Place[FAC|GPE|LOC] Target[FAC|GPE|LOC|ORG|PER|VEH] Time-Before[TME] Time-Holds[TME] Time-Starting[TME] Time-Within[TME] }
+Conflict:Demonstrate { Entity[PER] Place[FAC|GPE|LOC] Time-At-End[TME] Time-Starting[TME] Time-Within[TME] }
+Contact:Meet { Entity[GPE|ORG|PER] Place[FAC|GPE|LOC] Time-After[TME] Time-Ending[TME] Time-Holds[TME] Time-Starting[TME] Time-Within[TME] }
+Contact:Phone-Write { Entity[ORG|PER] Place[FAC|GPE] Time-Within[TME] }
+Justice:Acquit { Adjudicator[ORG|PER] Crime[Crime] Defendant[PER] Time-Within[TME] }
+Justice:Appeal { Adjudicator[ORG|PER] Crime[Crime] Place[FAC|GPE] Plaintiff[GPE|ORG|PER] Time-Within[TME] }
+Justice:Arrest-Jail { Agent[PER] Crime[Crime] Defendant[PER] Person[PER] Place[FAC|GPE] Time-At-Beginning[TME] Time-Ending[TME] Time-Holds[TME] Time-Starting[TME] Time-Within[TME] }
+Justice:Charge-Indict { Adjudicator[ORG|PER] Crime[Crime] Defendant[ORG|PER] Place[FAC|GPE] Prosecutor[GPE|PER] Time-Ending[TME] Time-Within[TME] }
+Justice:Convict { Adjudicator[ORG|PER] Crime[Crime] Defendant[GPE|ORG|PER] Place[FAC|GPE] Time-At-Beginning[TME] Time-Within[TME] }
+Justice:Execute { Agent[GPE] Crime[Crime] Person[PER] Place[GPE] Time-Within[TME] }
+Justice:Extradite { Agent[ORG] Destination[GPE] Person[PER] Time-Within[TME] }
+Justice:Fine { Adjudicator[ORG|PER] Entity[ORG|PER] Money[Numeric] Place[FAC] Time-Within[TME] }
+Justice:Pardon { Adjudicator[PER] Defendant[PER] Place[GPE] Time-At-End[TME] }
+Justice:Release-Parole { Crime[Crime] Person[PER] Place[FAC] Time-Within[TME] }
+Justice:Sentence { Adjudicator[GPE|ORG|PER] Crime[Crime] Defendant[GPE|ORG|PER] Place[FAC|GPE|LOC] Sentence[Sentence] Time-At-End[TME] Time-Starting[TME] Time-Within[TME] }
+Justice:Sue { Adjudicator[ORG] Defendant[ORG|PER] Plaintiff[PER] Time-Within[TME] }
+Justice:Trial-Hearing { Adjudicator[ORG|PER] Crime[Crime] Defendant[ORG|PER] Place[GPE] Prosecutor[ORG] Time-At-End[TME] Time-Holds[TME] Time-Starting[TME] Time-Within[TME] }
+Life:Be-Born { Person[PER] Place[FAC|GPE] Time-Within[TME] }
+Life:Die { Agent[GPE|ORG|PER] Instrument[VEH|WEA] Place[FAC|GPE|LOC] Time-Before[TME] Time-Ending[TME] Time-Holds[TME] Time-Starting[TME] Time-Within[TME] Victim[PER] }
+Life:Divorce { Person[PER] Place[GPE] Time-At-Beginning[TME] Time-At-End[TME] Time-Within[TME] }
+Life:Injure { Agent[GPE|PER] Instrument[WEA] Place[FAC|GPE|LOC] Time-Within[TME] Victim[PER] }
+Life:Marry { Person[PER] Place[FAC] Time-Before[TME] Time-Holds[TME] Time-Within[TME] }
+Movement:Transport { Agent[GPE|ORG|PER] Artifact[PER|VEH|WEA] Destination[FAC|GPE|LOC] Origin[FAC|GPE|LOC] Person[PER] Time-After[TME] Time-At-End[TME] Time-Before[TME] Time-Ending[TME] Time-Holds[TME] Time-Starting[TME] Time-Within[TME] Vehicle[VEH] }
+Personnel:Elect { Entity[GPE|ORG] Person[PER] Place[GPE] Position[Job-Title] Time-Holds[TME] Time-Within[TME] }
+Personnel:End-Position { Entity[GPE|ORG] Person[PER] Place[GPE] Position[Job-Title] Time-At-End[TME] Time-Within[TME] }
+Personnel:Nominate { Agent[GPE] Person[PER] Position[Job-Title] }
+Personnel:Start-Position { Entity[GPE|ORG] Person[PER] Place[GPE] Position[Job-Title] Time-After[TME] Time-Starting[TME] Time-Within[TME] }
+Transaction:Transfer-Money { Beneficiary[GPE|ORG|PER] Giver[GPE|ORG|PER] Money[Numeric] Recipient[GPE|ORG|PER] Time-After[TME] Time-Starting[TME] Time-Within[TME] }
+Transaction:Transfer-Ownership { Artifact[FAC|ORG|VEH|WEA] Beneficiary[GPE|ORG|PER] Buyer[GPE|ORG|PER] Place[GPE] Price[Numeric] Seller[GPE|ORG|PER] Time-At-Beginning[TME] Time-Before[TME] Time-Within[TME] }

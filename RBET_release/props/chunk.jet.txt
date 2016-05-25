@@ -1,0 +1,6 @@
+# JET properties file to run chunk patterns
+#   apply chunkPatterns to article.txt
+Jet.dataPath         = C:/Users/v-lesha/Documents/Packages/jet-140928/data
+Tags.fileName        = pos_hmm.txt
+Pattern.fileName1    = chunkPatterns.txt
+processSentence      = tokenize, tagJet, pat(chunks)
